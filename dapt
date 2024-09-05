@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-executor=doas
+executor="doas"
 
 if [ $# -eq 0 ]
 then
