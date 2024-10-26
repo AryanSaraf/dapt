@@ -27,10 +27,9 @@ case "$command" in
 		echo "  sh   show"
 		echo "  ls   list"
 		echo "  li   list --installed"
-		echo "Use with caution: all operations are performed unsandboxed as root."
 		;;
 	-v|--version)
-		echo "dapt version 1.3"
+		echo "dapt version 1.4"
 		;;
 	ud)
 		$executor apt update
@@ -51,19 +50,19 @@ case "$command" in
 		$executor apt install "$@"
 		;;
 	se)
-		$executor apt search "$@"
+		apt search "$@"
 		;;
 	sn)
-		$executor apt search --names-only "$@"
+		apt search --names-only "$@"
 		;;
 	sh)
-		$executor apt show "$@"
+		apt show "$@"
 		;;
 	ls)
-		$executor apt list "$@"
+		apt list "$@"
 		;;
 	li)
-		$executor apt list --installed "$@"
+		apt list --installed "$@"
 		;;
 	*)
 		echo "Command not found: \"$command\""
